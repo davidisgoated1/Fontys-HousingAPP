@@ -8,7 +8,9 @@ def create_app():
 
     # We are working with blueprints this part conect everything.
     from app.auth.routes import auth
-    
+    from app.dashboard.routes import dashboard
+
     app.register_blueprint(auth)
+    app.register_blueprint(dashboard)
 
     return app
